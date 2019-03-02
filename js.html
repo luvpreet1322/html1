@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
+
+<style>
+    .toggler { width: 100px; height: 200px; position: relative; }
+    #effect { width: 270px; height: 200px; padding: 0.4em; position: relative; background: #fff; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+
+  </style>
+<script>
+  $( function() {
+    var state = true;
+    $( "#button" ).on( "click", function() {
+      if ( state ) {
+        $( "#effect" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff",
+          width: 500
+        }, 1000 );
+      } else {
+        $( "#effect" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240
+        }, 1000 );
+      }
+      state = !state;
+    });
+ 	
+ 
+
+			$("#hide").click(function(){
+               $(".target").hide( "blind", {direction: "horizontal"}, 1000 );
+            });
+
+            $("#show").click(function(){
+               $(".target").show( "blind", {direction: "horizontal"}, 1000 );
+            });
+
+			 $("#clip").click(function(){
+               $(".target").hide( "clip", {direction: "horizontal"}, 1000 );
+            });
+
+            $("#clipp").click(function(){
+               $(".target").show( "clip", {direction: "vertical"}, 1000 );
+            });
+
+
+  });
+
+
+
+</script> 
+</head>
+<body>
+<button id="clip">clip hide</button>
+<button id="clipp">clip show</button>
+<button id="shake">Shake</button>
+<button id= "hide"> hide </button>
+<button id= "show"> show </button>
+
+
+<div class="toggler">
+<div class="target">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+    <h3 id="panel">INTRODUCTION</h3>
+    <p class="good"> Lovepreet Singh</p>
+<p>C0721133<br></br> Computer Programming</p>
+<p>Hobbies = listening music, playing games</p>
+  </div>
+</div>
+
+
+<br/ ><br/ ><br/ ><br/ ><br/ ><br/ ><br/ >
+
+</body>
+</html>
